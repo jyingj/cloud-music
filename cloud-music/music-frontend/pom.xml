@@ -5,6 +5,6 @@
     <artifactId>cloud-music</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>nusic-frontend</artifactId>
+  <artifactId>music-frontend</artifactId>
   <packaging>war</packaging>
 </project>

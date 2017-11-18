@@ -110,13 +110,13 @@
 		</dependencies>
 	</dependencyManagement>
 	<modules>
-		<module>music-common</module>
+		<module>music-backend</module>
 		<module>music-registry</module>
 		<module>music-config</module>
+		<module>music-common</module>
+		<module>music-gateway</module>
+		<module>music-frontend</module>
 		<module>music-song</module>
 		<module>music-movie</module>
-		<module>nusic-frontend</module>
-		<module>music-backend</module>
-		<module>music-gateway</module>
 	</modules>
 </project>
