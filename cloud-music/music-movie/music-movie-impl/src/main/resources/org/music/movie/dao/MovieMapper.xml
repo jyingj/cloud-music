@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.music.movie.dao.MovieMapper">
+	
+	<!-- 查询视频列表 -->
+	<select id="selectMovieList" resultType="org.music.movie.entity.Movie">
+		select 
+			id,name,type,area,url,screen_time as screenTime,director,performer,description
+		from 
+			movie
+	</select>
+	
+	<!-- 根据视频名称查询视频 -->
+	<select id="selectMovieByName" resultType="org.music.movie.entity.Movie">
+		select 
+			id,name,type,area,url,screen_time as screenTime,director,performer,description
+		from 
+			movie
+	</select>
+	
+	<!-- 根据id删除视频  -->
+	<delete id="deleteMovieById" parameterType="java.lang.Integer">
+		delete from movie where id = #{id,jdbcType=INTEGER}
+	</delete>
+	
+	<!-- 添加视频 -->
+	<insert id="insertMovie" parameterType="org.music.movie.entity.Movie">
+		insert into movie (
+			id,
+			name,
+			type,
+			area,
+			url,
+			screen_time,
+			director,
+			performer,
+			description
+		)
+		values (
+			#{id,jdbcType=INTEGER}, 
+			#{name,jdbcType=VARCHAR},
+			#{type,jdbcType=CHAR},
+			#{area,jdbcType=VARCHAR}, 
+			#{url,jdbcType=VARCHAR},
+			#{screenTime,jdbcType=CHAR},
+			#{director,jdbcType=VARCHAR}, 
+			#{performer,jdbcType=VARCHAR},
+			#{description,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	<!-- 修改视频  -->
+	<update id="updateMovieById" parameterType="org.music.movie.entity.Movie">
+		update movie
+		<set>
+			<if test="name != null">
+				name = #{name,jdbcType=VARCHAR},
+			</if>
+			<if test="type != null">
+				type = #{type,jdbcType=CHAR},
+			</if>
+			<if test="area != null">
+				area = #{area,jdbcType=VARCHAR},
+			</if>
+			<if test="url != null">
+				url = #{url,jdbcType=VARCHAR},
+			</if>
+			<if test="screenTime != null">
+				screen_time = #{screenTime,jdbcType=CHAR},
+			</if>
+			<if test="director != null">
+				director = #{director,jdbcType=VARCHAR},
+			</if>
+			<if test="performer != null">
+				performer = #{performer,jdbcType=VARCHAR},
+			</if>
+			<if test="description != null">
+				description = #{description,jdbcType=VARCHAR}
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

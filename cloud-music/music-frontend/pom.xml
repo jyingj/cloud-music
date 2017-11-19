@@ -113,6 +113,18 @@
 			<artifactId>music-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<!-- music-movie-api -->
+		<dependency>
+			<groupId>com.music</groupId>
+			<artifactId>music-movie-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- music-song-api -->
+		<dependency>
+			<groupId>com.music</groupId>
+			<artifactId>music-song-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
