@@ -125,6 +125,12 @@
 			<artifactId>music-song-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<!-- music-search -->
+		<dependency>
+			<groupId>com.music</groupId>
+			<artifactId>music-search-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -138,7 +144,7 @@
 					<archive>
 						<manifest>
 							<!-- 指定程序入口 -->
-							<mainClass>org.insurance.frontend.FrontEndApp</mainClass>
+							<mainClass>org.music.frontend.FrontendApp</mainClass>
 							<addClasspath>true</addClasspath>
 							<!-- 指定classpath路径 -->
 							<classpathPrefix>libs/</classpathPrefix>

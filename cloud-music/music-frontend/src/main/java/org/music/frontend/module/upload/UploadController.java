@@ -56,7 +56,7 @@ public class UploadController {
 			System.out.println("文件大小不能超过200MB");
 		}
 		String dateDir = DateUtil.dateToString(new Date(), "yyyyMM");
-		return FileUtil.upload(file, BASEPATH + modelName + "/" + detailName + "/" + dateDir);
+		return FileUtil.upload2(file, BASEPATH + modelName + "/", detailName + "/" + dateDir);
 	}
 
 }

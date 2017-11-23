@@ -118,5 +118,6 @@
 		<module>music-frontend</module>
 		<module>music-song</module>
 		<module>music-movie</module>
+		<module>music-search</module>
 	</modules>
 </project>
